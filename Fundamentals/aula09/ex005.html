@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Iniciando estudos com o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <p> 
+        Resumo da aula: Na aula 09 ensina-se sobre arvore DOM (Document Object Model), sua hierarquia.
+        Como ter acesso aos elementos de uma arvore DOM em uma variavel para manipula-los.
+        metodo getElementsByTagName etc outros.
+    </p>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // Seleciona o primeiro paragrafo, se eu quisesse o segundo eu faria [2]
+        window.document.write(p1.innerText)
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        div#res {
+            line-height: 0px;
+        }
+
+        div#res3 {
+            line-height: 0px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Fine System</h1>
+    Car speed <input type="number" name="txtvel" id="txtvel"> <Km>
+    <input type="button" value="Check" onclick="calcular()">
+    <div id="res">
+        
+    </div>
+
+    <div id="res2">
+
+    </div>
+
+    <div id="res3">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var speedTxtLabel = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var res2 = window.document.querySelector('div#res2')
+            var res3 = window.document.querySelector('div#res3')
+            var speed =  Number(speedTxtLabel.value)
+
+            res.innerHTML = `Your actual speed is <strong>${speed} Km/h</strong>`
+
+            if (speed > 60) {
+                res2.innerHTML = '<p>You are <strong>FINED</strong> for exceeding speed!</p>'
+            }
+
+            res3.innerHTML = '<p>Drive always using seat belt!</p>'
+        }
+    </script>
+
+</body>
+</html>

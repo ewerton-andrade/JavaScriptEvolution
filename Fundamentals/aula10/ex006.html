@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#area2 {
+            font: normal 20pt Arial;
+            background: rgb(227, 37, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <p>A primeira forma de fazer a interacao relacionada a eventos DOM no codigo HTML</p>
+    <div id= "area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <p>A segunda forma utilizando todo o codigo para interacao direto no JavaScript</p>
+    <div id = 'area2'>
+        Interaja...
+    </div>
+
+    <script>
+        //Script realizado com comandos para eventos em DOM utilizando codigo html, verificar div=id 
+        var d = window.document.getElementById('area') // Escopo global dentro do script
+
+        function clicar() {
+            d.innerText = 'Clicou!'
+        }
+
+        function entrar() {
+            d.innerText = "Entrou!"
+        }
+
+        function sair() {
+            d.innerText = "Saiu!"
+        }
+
+        //Script realizado com comandos para eventos em DOM utilizados diretamente no codigo JavaScript
+        var a = window.document.getElementById('area2')
+        a.addEventListener('click', clicando)
+        a.addEventListener('mouseenter', entrando)
+        a.addEventListener('mouseout', saindo)
+
+        function clicando() {
+            a.innerText = "Clicou!"
+            a.style.background = 'yellow'
+            a.style.color = 'black'
+        }
+
+        function entrando() {
+            a.innerText = "Entrou!"
+            a.style.background = 'blue'
+            a.style.color = 'white'
+        }
+
+        function saindo() {
+            a.innerText = "Saiu!"
+            a.style.background = 'red'
+            a.style.color = 'white'
+        }
+
+
+    </script>
+
+</body>
+</html>
