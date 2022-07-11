@@ -1,5 +1,6 @@
 var agora = new Date()
-diaSemana = agora.getHours()
+diaSemana = agora.getDay()
+console.log(diaSemana)
 
 switch(diaSemana) {
     case 0:
@@ -28,4 +29,9 @@ switch(diaSemana) {
 
     case 6:
         console.log('Saturday')
+        break
+    
+    default:
+        console.log('Erro, dia invalido')
+        break
 }
