@@ -1,6 +1,6 @@
 import './Banner.css'
 
-function Banner() {
+export const Banner = () => {
     //  JSX -> This is how React read the elements writen above and tranform
     //into DOM elements. This is not HTML is JSX.
     return (
@@ -9,5 +9,3 @@ function Banner() {
         </header>
     )
 }
-
-export default Banner;
