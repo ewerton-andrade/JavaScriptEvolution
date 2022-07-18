@@ -4,7 +4,7 @@ import DropList from "../DropList";
 import Btn from "../Button";
 import { useState } from "react";
 
-const Form = () => {
+const Form = (props) => {
 
 const teams = [
     'Coding', 
@@ -23,7 +23,12 @@ const teams = [
 
     const onSaving = (event) => {
         event.preventDefault()
-        console.log('The Form was submmited! => ', name, charge, image, team)
+        props.toCadastredWorker({
+            name,
+            charge,
+            image,
+            team,
+        })
     }
 
     return (
