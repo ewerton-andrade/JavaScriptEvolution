@@ -1,6 +1,7 @@
 import "./Form.css";
 import TextField from "../TextField";
 import DropList from "../DropList";
+import Btn from "../Button";
 
 const Form = () => {
 
@@ -22,6 +23,9 @@ const teams = [
                 <TextField label="Charge" placeholder="Insert your charge" />
                 <TextField label="Image" placeholder="Insert your image url" />
                 <DropList label='Team' itens={teams}/>
+                <Btn>
+                    Create Card
+                </Btn>
             </form>
         </section>
     )
